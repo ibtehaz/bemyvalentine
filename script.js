@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.getElementById('heartsCanvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     resizeCanvas(); // Set initial canvas size
 
-    window.addEventListener('resize', resizeCanvas); 
+    window.addEventListener('resize', resizeCanvas);
 
     const backgroundMusic = document.getElementById('backgroundMusic');
 
@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
         "Now, I've got two questions for you,",
         "Will you keep being my adventure, my heart's joyous ride?",
         "And will you be my Valentine, today and in all the days that come by? 💖"
-      ];
-      
+    ];
 
-    journeyButton.addEventListener('click', function() {
+
+    journeyButton.addEventListener('click', function () {
         if (!musicPlayed) {
             backgroundMusic.play();
             backgroundMusic.volume = 1.0; // Ensure the volume is set to 100%

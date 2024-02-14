@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -20,11 +21,14 @@ body, html {
     background-color: #ffefff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 90%; /* Adjusted for better responsiveness */
+    max-width: 90%;
+    /* Adjusted for better responsiveness */
     z-index: 2;
     position: relative;
-    margin: 20px; /* Adjusted margin for better spacing */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    margin: 20px;
+    /* Adjusted margin for better spacing */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
 }
 
 button {
@@ -37,15 +41,16 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
-    width: calc(100% - 40px); /* Ensure button does not overflow its container */
+    width: calc(100% - 40px);
+    /* Ensure button does not overflow its container */
     box-sizing: border-box;
     font-family: "Workbench", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "BLED" 0,
-    "SCAN" 0;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0;
 }
 
 button:hover {
@@ -53,8 +58,13 @@ button:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .message-animation {
@@ -116,4 +126,10 @@ button:hover {
         font-size: 14px;
         margin-top: 15px;
     }
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
 }
