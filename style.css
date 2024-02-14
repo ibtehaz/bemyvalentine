@@ -1,0 +1,119 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffefff;
+    font-family: "La Belle Aurore", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+}
+
+#content {
+    padding: 20px;
+    background-color: #ffefff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%; /* Adjusted for better responsiveness */
+    z-index: 2;
+    position: relative;
+    margin: 20px; /* Adjusted margin for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ff6384;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: calc(100% - 40px); /* Ensure button does not overflow its container */
+    box-sizing: border-box;
+    font-family: "Workbench", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+
+button:hover {
+    background-color: #e5537d;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.message-animation {
+    animation: fadeIn 2s;
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 45px;
+    background-color: red;
+    transform: rotate(-45deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.3s;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    top: -15px;
+}
+
+.heart::after {
+    left: 15px;
+    top: 0;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+}
+
+.pop-in {
+    opacity: 1;
+    transform: scale(1) rotate(-45deg);
+}
+
+#heartsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #content {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+}
